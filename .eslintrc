@@ -1,0 +1,36 @@
+{
+    "root": true,
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "project": [ "./tsconfig.json" ]
+    },
+    "plugins": [
+        "@typescript-eslint"
+    ],
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:@typescript-eslint/eslint-recommended"
+    ],
+    "settings": {
+        "react": {
+            "version": "detect"
+        }
+    },
+    "rules": {
+        // Some must-have rules
+        "indent": [ "warn", 4, { "SwitchCase": 1 } ],
+        "array-bracket-spacing": [ "warn", "always" ],
+        "object-curly-spacing": [ "warn", "always" ],
+        "@typescript-eslint/explicit-module-boundary-types": "off",
+        // Allow empty interfaces. Useful for PropsWithChildren generics.
+        "@typescript-eslint/no-empty-interface" : "off",
+        
+        // Disable warning that treats used imported components as unused.
+        "no-unused-vars": "off",
+        "@typescript-eslint/no-unused-vars": [
+            "warn"
+        ]
+    }
+}

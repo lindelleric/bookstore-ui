@@ -1,0 +1,9 @@
+version: '3'
+
+services:
+    bookstore-ui:
+        container_name: bookstore-ui
+        build: ./
+        ports:
+          - 8090:1234
+        restart: unless-stopped

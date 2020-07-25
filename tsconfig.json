@@ -1,0 +1,22 @@
+{
+    "compilerOptions": {
+        "baseUrl": "./src",
+        "target": "es2015",
+        "lib": [
+            "dom",
+            "es2015",
+            "es2018.promise" // Include this to get promise.finally. This is useful when handling loading state.
+        ],
+        "outDir": "./dist",
+        "jsx": "react",
+        "moduleResolution": "node",
+        "allowSyntheticDefaultImports": true, // Removes the need for "* as" when importing mudules without default export
+        "experimentalDecorators": true,
+        "strict": true,
+        "paths": {
+            "~/*": [
+                "./*"
+            ]
+        }
+    }
+}
