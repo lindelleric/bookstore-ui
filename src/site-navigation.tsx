@@ -22,15 +22,12 @@ const SiteHeader = styled.div`
 export default function SiteNavigation() {
     return (
         <Navigation>
-            <SiteHeader><h1>Lindell</h1></SiteHeader>
+            <SiteHeader><h1>Bookstore</h1></SiteHeader>
             <NavigationItem>
-                <NavigationLink to="/products">Products</NavigationLink>
+                <NavigationLink to="/books">Books</NavigationLink>
             </NavigationItem>
             <NavigationItem>
-                <NavigationLink to="/cart">Cart</NavigationLink>
-            </NavigationItem>
-            <NavigationItem right>
-                <NavigationLink to="/">Home</NavigationLink>
+                <NavigationLink to="/wishlists">Wishlists</NavigationLink>
             </NavigationItem>
         </Navigation>
     );

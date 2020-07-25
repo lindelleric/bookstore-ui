@@ -1,0 +1,11 @@
+query books {
+    books {
+    id
+    title
+    isbn13
+    numberOfPages
+    authors {
+        name
+    }
+  }
+}

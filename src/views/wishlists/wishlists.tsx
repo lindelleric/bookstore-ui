@@ -5,7 +5,7 @@ import SiteWrapper from '~/components/site-wrapper';
 export default function Cart() {
     return (
         <SiteWrapper>
-            <h1>This it the cart</h1>
+            <h1>wishlists</h1>
         </SiteWrapper>
     );
 }

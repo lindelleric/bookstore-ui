@@ -6,30 +6,35 @@ import {
     Redirect
 } from 'react-router-dom';
 
+import { ApolloProvider } from '@apollo/client';
+
 import GlobalStyles from './global-styles';
 
 import SiteNavigation from './site-navigation';
-import Products from './views/products/products';
-import Cart from './views/cart/cart';
+import Books from './views/books/books';
+import Wishlists from './views/wishlists/wishlists';
+import client from './apollo-client';
 
 export default function App() {
     return (
-        <GlobalStyles>
-            <Router>
-                <SiteNavigation />
+        <ApolloProvider client={client}>
+            <GlobalStyles>
+                <Router>
+                    <SiteNavigation />
 
-                <Switch>
-                    <Route path="/products">
-                        <Products />
-                    </Route>
-                    <Route path="/cart">
-                        <Cart />
-                    </Route>
-                    <Route path="/">
-                        <Redirect to="/products" />
-                    </Route>
-                </Switch>
-            </Router>
-        </GlobalStyles>
+                    <Switch>
+                        <Route path="/books">
+                            <Books />
+                        </Route>
+                        <Route path="/wishlists">
+                            <Wishlists />
+                        </Route>
+                        <Route path="/">
+                            <Redirect to="/books" />
+                        </Route>
+                    </Switch>
+                </Router>
+            </GlobalStyles>
+        </ApolloProvider>
     );
 }
