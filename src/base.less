@@ -1,0 +1,65 @@
+
+
+* {
+    font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif
+}
+
+body {
+    background-color: #F5F6FA;
+}
+
+a {
+    text-decoration: none;
+
+    &:hover {
+        color: #4880FE;
+    }
+}
+
+h1,
+h2,
+h3 {
+    font-weight: normal;
+}
+
+h1 {
+    font-size: 28px;
+}
+
+h2 {
+    font-size: 24px;
+}
+
+h3 {
+    font-size: 18px;
+}
+
+// TODO: Move to input component
+
+label {
+    margin-bottom: 8px;
+}
+
+input, select {
+    font: inherit;
+}
+
+input, select, .button {
+    border-radius: 4px;
+}
+
+select {
+    -webkit-appearance: none;
+    background: #FFF;
+}
+
+input[type=text], input[type=email], input[type=password], select {
+    margin-bottom: 32px;
+    padding: 12px;
+    width: 100%;
+    border: 1px solid #E5E9F2;
+}
+
+input[type=text]:focus, input[type=email]:focus, input[type=password]:focus, select:focus {
+    outline: 0;
+}

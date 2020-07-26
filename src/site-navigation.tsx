@@ -1,33 +1,39 @@
 import React from 'react';
-import styled from 'styled-components';
 
 import Navigation from './components/nav/nav';
 import NavigationItem from './components/nav/nav-item';
 import NavigationLink from './components/nav/nav-link';
-import { MainLight } from './colors';
+import Book from './components/icons/book';
+import styled from 'styled-components';
+import List from './components/icons/list';
+import { Red, Blue, Green } from './colors';
 
-const SiteHeader = styled.div`
-    color: ${ MainLight };
-    margin: 0 20px;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    h1 {
-        margin: 0;
-    }
+// TODO: margin-right doesn't work for some reason
+const BookIcon = styled(Book)`
+    margin-right: 5px; 
+    stroke: ${ Blue };
+`;
+    
+// TODO: margin-right doesn't work for some reason
+const ListIcon = styled(List)`
+    margin-right: 5px; 
+    stroke: ${ Green };
 `;
 
 export default function SiteNavigation() {
     return (
         <Navigation>
-            <SiteHeader><h1>Bookstore</h1></SiteHeader>
             <NavigationItem>
-                <NavigationLink to="/books">Books</NavigationLink>
+                <NavigationLink to="/books">
+                    <BookIcon />    
+                    Books
+                </NavigationLink>
             </NavigationItem>
             <NavigationItem>
-                <NavigationLink to="/wishlists">Wishlists</NavigationLink>
+                <NavigationLink to="/wishlists">
+                    <ListIcon />
+                    Wishlists
+                </NavigationLink>
             </NavigationItem>
         </Navigation>
     );

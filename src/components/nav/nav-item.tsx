@@ -9,10 +9,19 @@ const NavItem = styled.span<NavItemProps>`
     padding: 0 10px;
     color: #FFF;
     height: 100%;
-    ${ (props) => props.right ? `
-        right: 0;
-        position: absolute; ` : ''
-    };
+    ${ (props) => {
+        return props.right ? `
+            right: 0;
+            position: absolute; ` : ''
+    }};
+
+    &:first-child {
+        padding-left: 0;
+    }
+
+    &:last-child {
+        padding-right: 0;
+    }
 `;
 
 export default function NavigationItem({ children, right }: React.PropsWithChildren<NavItemProps>) {

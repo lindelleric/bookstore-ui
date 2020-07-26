@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { darken, lighten } from 'polished';
+import { darken } from 'polished';
 import { MainDark, MainLight, MainLightDark } from '~/colors';
 
 
@@ -19,8 +19,8 @@ const InnerButton = styled.button`
     transition: all 0.3s;
     height: 32px;
 
-    background-color: ${ MainDark };
-    color: ${ MainLight };
+    background-color: #4880FE;
+    color: #FFF;
 
     span {
         height: 10px;

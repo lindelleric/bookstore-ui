@@ -8,10 +8,21 @@ const app = express();
 app.use(
     '/api',
     createProxyMiddleware({
-        target: 'http://localhost:8181',
+        target: 'http://localhost:4000',
         changeOrigin: true,
         pathRewrite: {
-            '^/api': '/'
+            '^/api': ''
+        }
+    })
+);
+
+app.use(
+    '/assets',
+    createProxyMiddleware({
+        target: 'http://localhost:4000',
+        changeOrigin: true,
+        pathRewrite: {
+            '^/assets': '/'
         }
     })
 );

@@ -6,15 +6,15 @@ import { MainDark, MainLight } from '~/colors';
 const LinkWrapper = styled.span`
     a {
         height: 100%;
-        padding: 0 10px;
-        color: ${ MainLight };
+        /* padding: 0 15px; */
+        color: #8B93A6;
         display: inline-flex;
         align-items: center;
         text-decoration: none;
 
         &.active {
-            background-color: ${ MainLight };
-            color: ${ MainDark };
+            color: #333;
+            /* font-weight: bold; */
         }
     }
 `;
