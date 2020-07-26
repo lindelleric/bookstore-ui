@@ -6,7 +6,8 @@
     "start": "ts-node server.ts",
     "clean": "rm ./dist/*",
     "deploy": "git pull && docker-compose up -d --build",
-    "generate-gql": "graphql-codegen --config codegen.yml"
+    "generate-gql": "graphql-codegen --config codegen.yml",
+    "generate-qql:watch": "generate-gql --watch"
   },
   "devDependencies": {
     "@graphql-codegen/cli": "1.17.4",

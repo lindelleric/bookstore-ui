@@ -6,7 +6,7 @@ import NavigationLink from './components/nav/nav-link';
 import Book from './components/icons/book';
 import styled from 'styled-components';
 import List from './components/icons/list';
-import { Red, Blue, Green } from './colors';
+import { Blue, Green } from './colors';
 
 // TODO: margin-right doesn't work for some reason
 const BookIcon = styled(Book)`

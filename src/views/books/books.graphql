@@ -4,13 +4,33 @@ query books {
     }
 }
 
-query book($bookId: String!) {
+query bookSummary($bookId: String!) {
     book (bookId: $bookId) {
         id
         title
         isbn13
         authors {
             name
+        }
+    }
+}
+
+
+query bookDetails($bookId: String!) {
+    book (bookId: $bookId) {
+        id
+        title
+        isbn13
+        numberOfPages
+        synopsis
+        publishDate
+        authors {
+            id
+            name
+        }
+        wishlists {
+            id
+            title
         }
     }
 }

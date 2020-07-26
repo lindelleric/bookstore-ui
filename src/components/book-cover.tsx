@@ -1,5 +1,4 @@
 import React from 'react';
-import { Book } from '~/generated/graphql';
 import styled from 'styled-components';
 
 interface BookCoverProps {
@@ -8,7 +7,7 @@ interface BookCoverProps {
     className?: string;
 }
 
-const Cover = styled.div<{url: string}>`
+const Cover = styled.div<{url: string | null}>`
     width: 100%;
     height: 100%;
     box-shadow: 0 0 0 1px #E5E9F2;

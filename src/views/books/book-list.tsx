@@ -3,6 +3,7 @@ import React from 'react';
 import { useBooksQuery } from '~/generated/graphql';
 import BookListCard from './book-list-card';
 import styled from 'styled-components';
+import SiteWrapper from '~/components/site-wrapper';
 
 const List = styled.div`
     display: grid;
@@ -16,12 +17,16 @@ export default function BookList() {
     console.log({ data });
 
     if (loading) {
-        return <h3>Loading books ...</h3>
+        return <></>;
+        // return <h3>Loading books ...</h3>
     }
 
     return (
-        <List>
-            { data?.books.map(({ id }) => <BookListCard key={id} bookId={id} />) }
-        </List>
+        <>
+            <h1>Books</h1>
+            <List>
+                { data?.books.map(({ id }) => <BookListCard key={id} bookId={id} />) }
+            </List>
+        </>
     );
 }
